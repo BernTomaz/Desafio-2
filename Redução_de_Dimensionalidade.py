@@ -1,7 +1,7 @@
 from PIL import Image
 
 
-imagem_caminho = "c:/Users/Berna/OneDrive/Área de Trabalho/MachineLearning_Dio/Desafio 2/naruto.jpg"
+imagem_caminho = "naruto.jpg"
 
 
 try:
@@ -17,7 +17,7 @@ imagem_cinza = imagem.convert("L")
 print("Imagem convertida para tons de cinza e salva como 'naruto_cinza.jpg'.")
 
 # Converter para binária (preto e branco)
-threshold = 128  # Valor do limite (ajustável)
+threshold = 128 
 imagem_binaria = imagem_cinza.point(lambda p: 255 if p > threshold else 0)
 
 print("Imagem binarizada e salva como 'naruto_binaria.jpg'.")
